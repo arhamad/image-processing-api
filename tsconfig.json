@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",                          
+    "module": "commonjs",                     
+    "lib": ["ES2018", "DOM"], 
+    "outDir": "./dist",    
+    "rootDir": "./src",                    
+    "strict": true,                           
+    "noImplicitAny": true,  
+    "esModuleInterop": true               
+  },
+  "exclude": ["node_modules", "spec", "eslint.config.mts", "dist"]
+}

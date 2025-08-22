@@ -46,7 +46,11 @@ describe("Validation Utils", () => {
       expect(validateDimension("5001")).toBe(null);
       expect(validateDimension("abc")).toBe(null);
       expect(validateDimension("")).toBe(null);
-      expect(validateDimension("100.5")).toBe(100);
+      expect(validateDimension("100.5")).toBe(null);
+      expect(validateDimension("600rew")).toBe(null);
+      expect(validateDimension("500dsa")).toBe(null);
+      expect(validateDimension("123abc")).toBe(null);
+      expect(validateDimension("100px")).toBe(null);
     });
   });
 

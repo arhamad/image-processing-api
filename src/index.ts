@@ -8,11 +8,11 @@ app.use(express.json());
 
 app.use("/images", imageRoutes);
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (_req: Request, res: Response): void => {
   res.send("Use /images?filename=fjord&width=200&height=200");
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, (): void => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
 

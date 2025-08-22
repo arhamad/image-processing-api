@@ -9,7 +9,7 @@ const THUMB_DIR = path.join(__dirname, "../../assets/thumb");
 // Ensure thumb folder exists
 if (!fs.existsSync(THUMB_DIR)) fs.mkdirSync(THUMB_DIR, { recursive: true });
 
-export const getImagePath = (filename: string) => {
+export const getImagePath = (filename: string): string => {
   return path.join(FULL_DIR, `${filename}.jpg`);
 };
 
@@ -17,7 +17,7 @@ export const resizeImage = async (
   filename: string,
   width: number,
   height: number
-) => {
+): Promise<Buffer> => {
   // Validate all parameters
   validateImageParams(filename, width, height);
 

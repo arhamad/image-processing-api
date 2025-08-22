@@ -6,7 +6,10 @@ import {
   ErrorWithCode,
 } from "../utils/validation";
 
-export const getImage = async (req: Request, res: Response) => {
+export const getImage = async (
+  req: Request,
+  res: Response
+): Promise<Response | void> => {
   const { filename, width, height } = req.query;
 
   // Check for missing parameters

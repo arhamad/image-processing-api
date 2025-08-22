@@ -30,7 +30,8 @@ export const validateFilename = (filename: string): boolean => {
 
 export const validateDimension = (value: string): number | null => {
   const num = Number(value);
-  if (isNaN(num) || !Number.isInteger(num) || num <= 0 || num > 5000) return null;
+  if (isNaN(num) || !Number.isInteger(num) || num <= 0 || num > 5000)
+    return null;
   return num;
 };
 
